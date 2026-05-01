@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+<a class="btn btn-link d-block mx-auto" href="/companies">К компаниям</a>
+<form method="POST" action="" class="needs-validation mx-auto" novalidate="" style="width: fit-content">
+    <div class="col-sm-6" style="width: fit-content">
+        <label for="firstName" class="form-label">Инн компании</label>
+        <input name="inn" type="text" class="form-control {{ err_message is defined ? 'is-invalid' : '' }}" id="firstName" placeholder="" value="" required="">
+        {% if err_message is defined %}
+            <div class="invalid-feedback visible">
+                {{ err_message }}
+            </div>
+        {% endif %}
+    </div>
+    <button class="btn btn-primary mt-2">Добавить</button>
+</form>
+</body>
+</html>
